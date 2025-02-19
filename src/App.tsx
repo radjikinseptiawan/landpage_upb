@@ -4,6 +4,7 @@ import ProdiSection from './Component/Section'
 import { useEffect, useState } from 'react'
 import MainSection from './Component/Section/main'
 import Navigation from './Component/Navigation'
+import BasicTabs from './Component/Section/tabs'
 
 function App() {
   const [screen,setScreen] = useState(window.innerWidth)
@@ -26,6 +27,9 @@ function App() {
     <Box display={"flex"} zIndex={0} justifyItems={"center"} flexDirection={"column"} sx={{p:5,mt:4}}>
     <Box display={"grid"} zIndex={0} gridTemplateRows={ screen > 800 ? "repeat(2,1fr)" : "repeat(1,0.3fr)"} gridTemplateColumns={screen > 800 ?"repeat(2,1fr)" : "repeat(1,1fr)"} gap={5}>
     <ProdiSection></ProdiSection>
+    </Box>
+    <Box display={"flex"} alignContent={"center"} alignItems={"center"} justifyContent={"center"} justifyItems={"center"}>
+      <BasicTabs></BasicTabs>
     </Box>
     <Box display={"flex"} zIndex={0} justifyItems={"center"} alignItems={"center"}>
         <Button sx={{mx:"auto",backgroundColor:"darkred"}} size="large" target='_blank' variant="contained" href="https://pmb.pelitabangsa.ac.id/pb/pmb">Daftar Sekarang!</Button>
