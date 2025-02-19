@@ -1,7 +1,13 @@
 import { Divider, List, ListItem, ListItemText, Paper, Typography } from "@mui/material";
 import AOS from 'aos'
 import { useEffect } from "react";
-const StudiProgram = [
+
+interface studyList{
+    faculty : string,
+    programStudi : string[]
+}
+
+const StudiProgram : studyList[] = [
     {
         faculty : "Fakultas Teknik",
         programStudi : ["S1 Arsitektur","S1 Teknik Informatika","S1 Teknik Lingkngan","S1 Teknik Sipil","S1 Teknik Industri","S1 Teknologi Hasil Pertanian"]
@@ -31,13 +37,13 @@ export default function ProdiSection(){
     return(
         <>
         {
-        StudiProgram.map((item)=>(
+        StudiProgram.map((item : studyList ,index : number)=>(
             <Paper sx={{my:3,p:1}}>
             <Typography variant="h6" textAlign={"center"}>
                 {item.faculty}
             </Typography>
             <Divider/>
-                {item.programStudi.map((studi,index) =>(
+                {item.programStudi.map((studi : string) =>(
                     <List>
                         <ListItem>
                             <ListItemText primary={studi} key={index}></ListItemText>

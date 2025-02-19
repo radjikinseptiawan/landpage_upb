@@ -20,8 +20,10 @@ function App() {
     <Box zIndex={20}>
     <Navigation></Navigation>
     </Box>
-    <Box display={"flex"} zIndex={0} justifyItems={"center"} flexDirection={"column"} sx={{p:5,mt:4}}>
+    <Box top={0}>
     <MainSection></MainSection>
+    </Box>
+    <Box display={"flex"} zIndex={0} justifyItems={"center"} flexDirection={"column"} sx={{p:5,mt:4}}>
     <Box display={"grid"} zIndex={0} gridTemplateRows={ screen > 800 ? "repeat(2,1fr)" : "repeat(1,0.3fr)"} gridTemplateColumns={screen > 800 ?"repeat(2,1fr)" : "repeat(1,1fr)"} gap={5}>
     <ProdiSection></ProdiSection>
     </Box>
