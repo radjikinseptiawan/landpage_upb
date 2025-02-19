@@ -4,19 +4,20 @@ import './index.css'
 import { useEffect, useState } from "react";
 export default function Video() {
   const [height,setHeight] = useState(window.innerHeight)
-
+  const [width,setWidth] = useState(window.innerWidth)
   useEffect(()=>{
     const updateSize = ()=> setHeight(window.innerHeight)
-
+    const updateWidth = ()=>setWidth(window.innerWidth)
     window.addEventListener("resize",updateSize)
-
+    window.addEventListener("resize",updateWidth)
     return ()=>{
         window.removeEventListener("resize",updateSize)
+        window.removeEventListener("resize",updateWidth)
     }
   },[])
     return (
     <Box 
-    minHeight={height < 500 ? 250 : 750}
+    minHeight={height * width < 785920 ? 250 : 500}
     sx={{
         position:"relative",
         overflow:"hidden",

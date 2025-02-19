@@ -35,7 +35,7 @@ export default function MainSection() {
       <Typography sx={{paddingLeft:4,paddingTop:4}} variant="h4">{mainContaint.namaKampus}</Typography>
       <Typography sx={{paddingLeft:4}} variant="h5">{mainContaint.motto}</Typography>
       <Typography variant="h6" sx={{pl:4}}>Lokasi Kampus</Typography>
-      <Box display={"flex"} sx={{ml:4}} gap={5} justifyItems={"center"} justifyContent={"center"}>
+      {/* <Box display={"flex"} sx={{ml:4}} gap={5} justifyItems={"center"} justifyContent={"center"}>
         
         {kampusLocate.map(item =>{
           return(
@@ -47,7 +47,7 @@ export default function MainSection() {
             </>
           )
         })}
-      </Box>
+      </Box> */}
     </Box>
   )
 }
