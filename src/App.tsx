@@ -29,10 +29,10 @@ function App() {
     <ProdiSection></ProdiSection>
     </Box>
     <Box display={"flex"} alignContent={"center"} alignItems={"center"} justifyContent={"center"} justifyItems={"center"}>
-      <BasicTabs></BasicTabs>
     </Box>
-    <Box display={"flex"} zIndex={0} justifyItems={"center"} alignItems={"center"}>
-        <Button sx={{mx:"auto",backgroundColor:"darkred"}} size="large" target='_blank' variant="contained" href="https://pmb.pelitabangsa.ac.id/pb/pmb">Daftar Sekarang!</Button>
+    <Box display={"flex"} zIndex={0} flexDirection={"column"}justifyItems={"center"} alignItems={"center"}>
+      <BasicTabs></BasicTabs>
+      <Button sx={{mx:"auto",backgroundColor:"darkred"}} size="large" target='_blank' variant="contained" href="https://pmb.pelitabangsa.ac.id/pb/pmb">Daftar Sekarang!</Button>
     </Box>
     </Box>
     </>
